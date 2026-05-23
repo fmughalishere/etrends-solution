@@ -1,42 +1,42 @@
 "use client";
-import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
+import { CONTACT_INFO, NAV_LINKS } from "../constants";
+import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
-export default function ContactPage() {
+export default function Footer() {
   return (
-    <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-16"
-      >
+    <footer className="bg-[#020617] border-t border-white/5 pt-24 pb-12">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-20 mb-20">
         <div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8">Get in <span className="text-blue-500">Touch</span></h1>
-          <p className="text-gray-400 text-lg mb-12">Have a project in mind? Let's build something amazing together.</p>
-          
-          <div className="space-y-8">
-            <div className="flex items-center gap-6">
-              <div className="p-4 glass rounded-2xl text-blue-500"><Mail size={24}/></div>
-              <div><p className="text-sm text-gray-500">Email us at</p><p className="text-xl font-medium">info@etrendssolutions.com</p></div>
-            </div>
-            <div className="flex items-center gap-6">
-              <div className="p-4 glass rounded-2xl text-blue-500"><Phone size={24}/></div>
-              <div><p className="text-sm text-gray-500">Call us at</p><p className="text-xl font-medium">+92 312 1234567</p></div>
-            </div>
+          <h2 className="text-2xl font-bold mb-6">E_trends <span className="text-blue-500">SOLUTIONS</span></h2>
+          <p className="text-gray-400 leading-relaxed mb-8">Empowering travel businesses with innovation, automation, and powerful marketing strategies since 2017.</p>
+          <div className="flex gap-4">
+            <Link href={CONTACT_INFO.socials.facebook} className="p-4 glass rounded-2xl hover:bg-blue-600 transition-colors"><FaFacebookF/></Link>
+            <Link href={CONTACT_INFO.socials.instagram} className="p-4 glass rounded-2xl hover:bg-pink-600 transition-colors"><FaInstagram/></Link>
+            <Link href={CONTACT_INFO.socials.linkedin} className="p-4 glass rounded-2xl hover:bg-blue-700 transition-colors"><FaLinkedinIn/></Link>
           </div>
         </div>
-        <div className="glass p-8 md:p-12 rounded-[40px]">
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input type="text" placeholder="Full Name" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition-colors" />
-              <input type="email" placeholder="Email Address" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition-colors" />
-            </div>
-            <input type="text" placeholder="Subject" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition-colors" />
-            <textarea placeholder="Your Message" rows={5} className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition-colors"></textarea>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 py-5 rounded-2xl font-bold text-lg transition-all">Send Message</button>
-          </form>
+        <div>
+          <h4 className="font-bold mb-8 uppercase tracking-widest text-sm text-blue-500">Company</h4>
+          <ul className="space-y-4">
+            {NAV_LINKS.map(link => (
+              <li key={link.href}><Link href={link.href} className="text-gray-400 hover:text-white transition-colors">{link.label}</Link></li>
+            ))}
+          </ul>
         </div>
-      </motion.div>
-    </div>
+        <div>
+          <h4 className="font-bold mb-8 uppercase tracking-widest text-sm text-blue-500">Contact Us</h4>
+          <p className="text-gray-400 mb-4">{CONTACT_INFO.address}</p>
+          <p className="text-gray-300 font-bold mb-2">WhatsApp: {CONTACT_INFO.whatsapp}</p>
+          <p className="text-gray-300 font-bold">Phone: {CONTACT_INFO.phone}</p>
+        </div>
+      </div>
+      <div className="text-center text-gray-600 text-sm border-t border-white/5 pt-12">
+        © {new Date().getFullYear()} E_trends Solutions. All Rights Reserved.
+      </div>
+      <Link href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" className="fixed bottom-10 right-10 bg-green-500 p-5 rounded-full shadow-2xl hover:scale-110 transition-transform z-[100] text-white">
+        <FaWhatsapp size={30} />
+      </Link>
+    </footer>
   );
 }
