@@ -13,7 +13,7 @@ export const NAV_LINKS = [
       { label: "Digital Marketing", href: "/services/marketing" },
       { label: "Lead Generation", href: "/services/leadgen" },
       { label: "SEO Optimization", href: "/services/seo" },
-      { label: "Web Development", href: "/services/web" },
+      { label: "Web Design & Development", href: "/services/web" },
       { label: "AI & Automation", href: "/services/ai" },
       { label: "CRM Development", href: "/services/crm" },
     ]

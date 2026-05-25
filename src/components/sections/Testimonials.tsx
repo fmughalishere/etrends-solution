@@ -14,13 +14,13 @@ export default function Testimonials() {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 bg-white/5 border border-white/5">
-          {REVIEWS.slice(0, 6).map((rev, i) => (
+          {REVIEWS.slice(0, 3).map((rev, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="group relative p-10 bg-[#0d0d0d] hover:bg-[#00aef0] transition-all duration-500 ease-in-out flex flex-col justify-between min-h-[400px]"
+              className="group relative p-10 bg-[#0d0d0d] hover:bg-[#00aef0] transition-all duration-500 ease-in-out flex flex-col justify-between min-h-[300px]"
             >
               <div>
                 <div className="flex gap-1 mb-8 text-[#00aef0] group-hover:text-black transition-colors">

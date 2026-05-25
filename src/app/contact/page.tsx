@@ -166,18 +166,25 @@ export default function ContactPage() {
                     <option value="" className="bg-black">
                       Select a Service
                     </option>
-                    <option value="Web Design" className="bg-black">
-                      Website Design & Development
+                    <option value="Digital Marketing" className="bg-black">
+                      Digital Marketing
                     </option>
-                    <option value="SEO" className="bg-black">
-                      SEO Optimization
-                    </option>
-                    <option value="Lead Gen" className="bg-black">
+                    <option value="Lead Generation" className="bg-black">
                       Lead Generation
                     </option>
-                    <option value="AI Automation" className="bg-black">
+                    <option value="SEO Optimization" className="bg-black">
+                      SEO Optimization
+                    </option>
+                    <option value="Web Development" className="bg-black">
+                      Web Design & Development
+                    </option>
+                    <option value="AI & Automation" className="bg-black">
                       AI & Automation
                     </option>
+                    <option value="CRM Development" className="bg-black">
+                      CRM Development
+                    </option>
+
                   </select>
                 </div>
 
