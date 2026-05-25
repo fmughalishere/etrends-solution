@@ -44,7 +44,9 @@ export default function Home() {
             { label: "Client Growth", value: "3.8x" },
           ].map((stat, i) => (
             <div key={i} className="border-l border-white/10 pl-6">
-              <h3 className="text-4xl font-bold text-white mb-2">{stat.value}</h3>
+              <h3 className="text-4xl font-bold text-white mb-2">
+                {stat.value}
+              </h3>
               <p className="text-[#00aef0] font-bold uppercase tracking-widest text-[10px]">
                 {stat.label}
               </p>
@@ -61,15 +63,13 @@ export default function Home() {
               We Can Help You With
             </h2>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 bg-white/5 border border-white/5">
-            {SERVICES_DATA.slice(0, 6).map((service) => (
+            {SERVICES_DATA.slice(0, 3).map((service) => (
               <Link
                 key={service.id}
                 href={`/services/${service.id}`}
                 className="group relative h-[250px] bg-black overflow-hidden flex flex-col justify-end p-10"
               >
-                {/* Hover Background Fill */}
                 <div className="absolute inset-0 bg-[#00aef0] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
 
                 <div className="relative z-10">
@@ -85,6 +85,15 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+          <div className="flex justify-end mt-10">
+            <Link
+              href="/services"
+              className="group inline-flex items-center gap-3 border border-[#00aef0] px-6 py-3 text-white uppercase tracking-widest text-sm font-semibold hover:bg-[#00aef0] hover:text-black transition-all duration-300"
+            >
+              Show More
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
       </section>
@@ -118,12 +127,24 @@ export default function Home() {
 }
 function ValueCard({ icon, title, desc, highlight }: any) {
   return (
-    <div className={`p-16 border border-white/5 flex flex-col items-center text-center transition-all duration-700 ${
-      highlight ? "bg-[#00aef0] text-black" : "bg-transparent text-white"
-    }`}>
-      <div className={`mb-10 scale-125 ${highlight ? "text-black" : "text-[#00aef0]"}`}>{icon}</div>
-      <h3 className="text-xl font-bold uppercase tracking-tighter mb-4">{title}</h3>
-      <p className={`text-sm leading-relaxed ${highlight ? "text-black/70" : "text-gray-400"}`}>{desc}</p>
+    <div
+      className={`p-16 border border-white/5 flex flex-col items-center text-center transition-all duration-700 ${
+        highlight ? "bg-[#00aef0] text-black" : "bg-transparent text-white"
+      }`}
+    >
+      <div
+        className={`mb-10 scale-125 ${highlight ? "text-black" : "text-[#00aef0]"}`}
+      >
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold uppercase tracking-tighter mb-4">
+        {title}
+      </h3>
+      <p
+        className={`text-sm leading-relaxed ${highlight ? "text-black/70" : "text-gray-400"}`}
+      >
+        {desc}
+      </p>
     </div>
   );
 }
