@@ -11,7 +11,7 @@ export default function ServicesPage() {
             <section className="relative h-[60vh] w-full flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/services.jpeg" 
+            src="/s1.jpeg" 
             alt="Services" fill className="object-cover opacity-20 grayscale" 
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />

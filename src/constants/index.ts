@@ -18,7 +18,11 @@ export const NAV_LINKS = [
       { label: "CRM Development", href: "/services/crm" },
     ]
   },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Portfolio", href: "/portfolio",
+    dropdown: [
+      { label: "Case Studies", href: "/portfolio" },
+    ]
+  },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
