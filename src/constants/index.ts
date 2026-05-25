@@ -42,7 +42,7 @@ export const CASE_STUDIES = [
     category: "Immigration Marketing — Law Group",
     description: "Deployed our immigration-specific Meta and Google funnel — pre-screened audiences, compliant ad copy, and a dedicated intake landing page. Average CPL held at $15 against a $70 industry benchmark.",
     stats: "$15 CPL",
-    image: "/2.jpg"
+    image: "/3.jpg"
   },
 
 ];
