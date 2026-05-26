@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { NAV_LINKS } from "../constants";
 
 export default function Navbar() {
@@ -36,7 +36,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8 xl:gap-10">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-6">
             {NAV_LINKS.map((link) => (
               <div
                 key={link.label}
@@ -101,6 +101,12 @@ export default function Navbar() {
               >
                 <FaLinkedin size={20} />
               </Link>
+              <Link
+                href="https://www.facebook.com/etrendssolutions/"
+                className="text-[#0a1d4a] hover:text-[#00aef0] transition"
+              >
+                <FaFacebook size={20} />
+              </Link>
             </div>
 
             <Link
@@ -126,7 +132,6 @@ export default function Navbar() {
         }`}
       >
         <div className="pt-28 pb-10 px-6 sm:px-8 flex flex-col h-full overflow-y-auto">
-          {/* Mobile Links */}
           <div className="flex flex-col">
             {NAV_LINKS.map((link) => (
               <div key={link.label} className="border-b border-gray-200">

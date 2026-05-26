@@ -35,6 +35,7 @@ export const NAV_LINKS = [
    },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "CEO Message", href: "/ceo-message"},
 ];
 
 export const PORTFOLIO_STATS = [
