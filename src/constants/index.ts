@@ -167,7 +167,7 @@ export const PORTFOLIO_CLIENTS = [
   "Kaaba Travels (UK)", "Lynxclub", "Zair e Hussain", "24 Travel Ltd", "Starway Travel", 
   "Travelopedia Ltd", "Next Visa Step", "Naseebi", "Pilgrims Taxi", "Pace Travel (UK)", 
   "Adventure Flights (UK)", "Axen Holidays (UK, USA)", "Worldflyer Travel (UK)", "Ayat Travel (UK)", 
-  "Travel Experts (UK)", "Nayyar Expeditions (UK)", "Mark-Us Digital Agency"
+  "Travel Experts (UK)", "Nayyar Expeditions (UK)", "Mark-Us Digital Agency", "And many more",
 ];
 
 export const ABOUT_DATA = {
