@@ -65,7 +65,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
             <div>
               <Image 
-                src="/nav-logo.jpeg" 
+                src="/navbar-logo.png" 
                 alt="Footer Logo" 
                 width={180} 
                 height={50} 
