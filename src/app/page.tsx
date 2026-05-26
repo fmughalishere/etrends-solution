@@ -70,12 +70,18 @@ export default function Home() {
                 href={`/services/${service.id}`}
                 className="group relative h-[250px] bg-black overflow-hidden flex flex-col justify-end p-10"
               >
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover grayscale group-hover:scale-110 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-[#00aef0] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
 
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-8 h-[1px] bg-white group-hover:bg-navy-900 transition-all" />
-                    <h3 className="text-lg font-bold text-white uppercase tracking-widest group-hover:text-black transition-colors">
+                    <div className="w-8 h-[1px] bg-black group-hover:bg-navy-900 transition-all" />
+                    <h3 className="text-lg font-bold text-black uppercase tracking-widest group-hover:text-black transition-colors">
                       {service.title}
                     </h3>
                   </div>
@@ -106,14 +112,18 @@ export default function Home() {
 
         <div className="relative w-full overflow-hidden">
           <motion.div
-            className="flex gap-16 md:gap-32 whitespace-nowrap"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+            className="flex gap-10 md:gap-24 whitespace-nowrap w-max"
+            animate={{ x: ["0%", "-20%"] }}
+            transition={{
+              repeat: Infinity,
+              duration: 18,
+              ease: "linear",
+            }}
           >
             {[...PORTFOLIO_CLIENTS, ...PORTFOLIO_CLIENTS].map((client, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 text-white text-2xl md:text-5xl font-black uppercase tracking-tighter opacity-20 grayscale hover:grayscale-0 hover:opacity-100 hover:text-[#00aef0] transition-all duration-300 cursor-default"
+                className="flex-shrink-0 text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tighter opacity-20 grayscale hover:grayscale-0 hover:opacity-100 hover:text-[#00aef0] transition-all duration-300 cursor-default"
               >
                 {client.split(" ")[0]}
               </div>

@@ -13,7 +13,7 @@ export default function Hero() {
           src="/hero-banner.jpeg"
           alt="Digital Transformation"
           fill
-          className="object-cover opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700"
+          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent" />

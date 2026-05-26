@@ -15,7 +15,7 @@ export default function AboutPage() {
             src="/hero-banner.jpeg"
             alt="About Us"
             fill
-            className="object-cover opacity-20 grayscale"
+            className="object-cover grayscale"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
         </div>

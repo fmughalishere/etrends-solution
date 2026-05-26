@@ -20,7 +20,7 @@ export default function Footer() {
             src="/lets-talk.jpeg"
             alt="CTA"
             fill
-            className="object-cover opacity-20 grayscale"
+            className="object-cover grayscale"
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
@@ -87,7 +87,9 @@ export default function Footer() {
                   href={
                     item === "Contact us"
                       ? "/contact"
-                      : `/${item.toLowerCase().replace(" ", "-")}`
+                      : item === "Our Work"
+                        ? "/portfolio"
+                        : `/${item.toLowerCase().replace(" ", "-")}`
                   }
                   className="text-[11px] font-bold uppercase tracking-[2px] text-white hover:text-[#00aef0] transition-colors"
                 >

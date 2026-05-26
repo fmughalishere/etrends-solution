@@ -1,4 +1,5 @@
 // src/constants/index.ts
+import { label } from "framer-motion/client";
 import { 
   Globe, Megaphone, Search, Palette, 
   MessageSquare, Settings, Layout, Share2 
@@ -16,6 +17,8 @@ export const NAV_LINKS = [
       { label: "Web Design & Development", href: "/services/web" },
       { label: "AI & Automation", href: "/services/ai" },
       { label: "CRM Development", href: "/services/crm" },
+      { label: "Content Creation", href: "/services/content" },
+      { label: "Social Media Handling", href: "/services/social" },
     ]
   },
   { label: "Portfolio", href: "/portfolio",
@@ -23,6 +26,13 @@ export const NAV_LINKS = [
       { label: "Case Studies", href: "/portfolio" },
     ]
   },
+  { label: "Blogs", href: "/blogs",
+    dropdown: [
+      { label: "Technology", href: "/blogs/ai-travel-revolution" },
+      { label: "SEO Tips", href: "/blogs/seo-for-uk-flights" },
+      { label: "Marketing Strategies", href: "/blogs/lead-gen-strategies" },
+    ]
+   },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -69,6 +79,7 @@ export const SERVICES_DATA = [
   { 
     id: "marketing",
     title: "Digital Marketing", 
+    image: "/digital-marketing.jpg",
     icon: Megaphone, 
     desc: "Result-driven marketing strategies that build your brand and boost online presence.",
     detailedContent: "Our Digital Marketing services are designed specifically for travel and service-based businesses looking to grow online. We create data-driven strategies that include paid advertising, audience targeting, and conversion optimization. Our campaigns are focused on generating real ROI, increasing brand awareness, and attracting high-intent customers. With expertise in UK, USA, and Pakistan markets, we ensure your business reaches the right audience at the right time."
@@ -76,6 +87,7 @@ export const SERVICES_DATA = [
   { 
     id: "leadgen",
     title: "Lead Generation", 
+    image: "/lead-generation.jpg",
     icon: Share2, 
     desc: "High quality leads that convert into bookings and grow your business.",
     detailedContent: "We specialize in generating high-quality leads for travel agencies, Umrah services, Flights (including African Sector from UK), and tour operators. Using advanced funnel strategies, landing pages, and targeted ads, we bring customers who are ready to book. Our system ensures consistent lead flow, better conversions, and reduced cost per acquisition. We help you scale your business with predictable and reliable lead generation systems."
@@ -83,6 +95,7 @@ export const SERVICES_DATA = [
   { 
     id: "seo",
     title: "SEO Optimization", 
+    image: "/seo-optimization.jpg",
     icon: Search, 
     desc: "Rank higher, get found by more travelers and increase organic traffic.",
     detailedContent: "Our SEO services help your website rank higher on Google and attract organic traffic. We perform keyword research, on-page optimization, technical SEO, and backlink building. Our focus is on travel-related keywords that bring real customers. With long-term SEO strategies, we ensure your business gains visibility and authority in search engines."
@@ -90,6 +103,7 @@ export const SERVICES_DATA = [
   { 
     id: "web",
     title: "Website Design & Development", 
+    image: "/web-development.jpg",
     icon: Globe, 
     desc: "Modern, responsive and conversion focused websites that convert visitors into customers.",
     detailedContent: "We design modern, fast, and mobile-friendly websites that convert visitors into customers. Our websites are optimized for speed, user experience, and SEO. Whether it's a travel booking site or a corporate website, we build solutions that reflect your brand identity and drive business growth."
@@ -97,6 +111,7 @@ export const SERVICES_DATA = [
   { 
     id: "ai",
     title: "AI & Automation", 
+    image: "/ai-automation.jpg",
     icon: MessageSquare, 
     desc: "Smart automation that engages visitors, answers queries and boosts satisfaction.",
     detailedContent: "Our AI chatbot solutions automate your customer support and lead handling process. We build intelligent chatbots that can answer queries, capture leads, and guide customers 24/7. Automation reduces workload, improves response time, and increases conversion rates for your business."
@@ -104,6 +119,7 @@ export const SERVICES_DATA = [
   { 
     id: "crm",
     title: "CRM Development", 
+    image: "/crm-development.jpg",
     icon: Settings, 
     desc: "Custom CRM solutions to manage leads, bookings and relationships efficiently.",
     detailedContent: "We develop custom CRM systems tailored to your business needs. Our CRM solutions help you manage leads, track customer interactions, and automate workflows. With a centralized system, you can improve efficiency, enhance customer relationships, and increase sales performance."
@@ -111,6 +127,7 @@ export const SERVICES_DATA = [
   { 
     id: "content",
     title: "Content Creation", 
+    image: "/content-creation.jpg",
     icon: Layout, 
     desc: "Engaging content that informs, inspires and drives action across all platforms.",
     detailedContent: "We create high-quality, engaging, and SEO-optimized content for your brand. From website content to blogs and marketing copy, our content is designed to attract, engage, and convert your audience. We focus on storytelling and value-driven content that builds trust and authority."
@@ -118,6 +135,7 @@ export const SERVICES_DATA = [
   { 
     id: "social",
     title: "Social Media Handling", 
+    image: "/social-handling.jpg",
     icon: Palette, 
     desc: "Managing your social presence to build engagement and loyal communities.",
     detailedContent: "We manage your social media presence professionally across platforms like Facebook, Instagram, and more. Our services include content posting, audience engagement, and ad management. We help you build a strong brand presence, increase followers, and generate leads through social media marketing."
@@ -170,3 +188,39 @@ export const CONTACT_INFO = {
     linkedin: "https://www.linkedin.com/company/109129070/",
   }
 };
+
+export const BLOGS_DATA = [
+  {
+    id: "ai-travel-revolution",
+    title: "5 Ways AI is Revolutionizing Travel Agencies in 2024",
+    excerpt: "Discover how smart automation and AI chatbots are helping travel agencies close 3x more deals without extra staff.",
+    content: "Artificial Intelligence is no longer just a buzzword; it's a powerful tool for travel agencies. In 2024, AI is helping businesses automate inquiry handling, personalize travel itineraries, and predict market trends with 90% accuracy. By implementing AI chatbots, agencies in the UK and USA are seeing a massive reduction in cost-per-lead and a significant increase in 24/7 customer satisfaction. Our latest research shows that agencies using automated CRM workflows are saving up to 20 hours per week in manual data entry.",
+    date: "May 20, 2024",
+    category: "Technology",
+    image: "/1.jpg",
+    author: "Hassan Ali",
+    readTime: "5 min read"
+  },
+  {
+    id: "seo-for-uk-flights",
+    title: "Mastering SEO for UK-based Flight Booking Sites",
+    excerpt: "Ranking for flight keywords is tough. Learn the technical SEO strategies we used to lift traffic for our UK clients.",
+    content: "Technical SEO is the backbone of flight booking platforms. When dealing with the African sector or Umrah flights from London, your site needs to be lightning-fast and mobile-optimized. Our strategy involves deep keyword research into high-intent long-tail terms like 'Last minute flights to Lagos' or 'Umrah packages 2024'. By structuring schema markup and improving Core Web Vitals, we've helped agencies move from page 10 to the top 3 spots on Google Search, resulting in organic growth that lasts.",
+    date: "May 22, 2024",
+    category: "SEO",
+    image: "/2.jpg",
+    author: "Digital Team",
+    readTime: "7 min read"
+  },
+  {
+    id: "lead-gen-strategies",
+    title: "The Science of Lead Generation for Tour Operators",
+    excerpt: "Stop wasting budget on low-quality leads. Here is how to target high-net-worth travelers using Meta Ads.",
+    content: "Lead generation for tour operators requires a balance of psychology and data. For our USA and Pakistan clients, we deploy a 'Value-First' funnel. Instead of asking for a booking immediately, we offer travel guides or price comparisons. This builds trust. Using Meta's Advantage+ targeting, we focus on travelers interested in luxury tours and religious tourism. The results? Leads that actually convert into bank transfers rather than just 'window shoppers'.",
+    date: "May 24, 2024",
+    category: "Marketing",
+    image: "/3.jpg",
+    author: "Hassan Ali",
+    readTime: "6 min read"
+  }
+];
