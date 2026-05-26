@@ -84,8 +84,16 @@ export const SERVICES_DATA = [
     image: "/web-development.jpg",
     icon: Globe, 
     desc: "Modern, responsive and conversion focused websites that convert visitors into customers.",
-    detailedContent: "We design modern, fast, and mobile-friendly websites that convert visitors into customers. Our websites are optimized for speed, user experience, and SEO. Whether it's a travel booking site or a corporate website, we build solutions that reflect your brand identity and drive business growth."
+    detailedContent: "We design modern, fast, and mobile-friendly websites that convert visitors into customers. Our websites are optimized for speed, user experience, and SEO. Whether it's a travel booking site or a corporate website, we build solutions that reflect your brand identity and drive business growth.",
+
+    points: [
+      "Responsive mobile-first layouts",
+      "Fast loading performance",
+      "SEO optimized structure",
+      "Custom UI/UX experience",
+    ]
   },
+
   { 
     id: "marketing",
     title: "Digital Marketing", 
@@ -93,17 +101,33 @@ export const SERVICES_DATA = [
     image: "/digital-marketing.jpg",
     icon: Megaphone, 
     desc: "Result-driven marketing strategies that build your brand and boost online presence.",
-    detailedContent: "Our Digital Marketing services are designed specifically for travel and service-based businesses looking to grow online. We create data-driven strategies that include paid advertising, audience targeting, and conversion optimization. Our campaigns are focused on generating real ROI, increasing brand awareness, and attracting high-intent customers. With expertise in UK, USA, and Pakistan markets, we ensure your business reaches the right audience at the right time."
+    detailedContent: "Our Digital Marketing services are designed specifically for travel and service-based businesses looking to grow online. We create data-driven strategies that include paid advertising, audience targeting, and conversion optimization. Our campaigns are focused on generating real ROI, increasing brand awareness, and attracting high-intent customers. With expertise in UK, USA, and Pakistan markets, we ensure your business reaches the right audience at the right time.",
+
+    points: [
+      "Targeted paid ad campaigns",
+      "High-converting funnels",
+      "Audience behavior analysis",
+      "ROI-focused marketing",
+    ]
   },
+
   { 
     id: "leadgen",
     title: "Lead Generation", 
     image: "/lead-generation.jpg",
-    tagline: " We don’t just bring traffic — we bring real leads ready to buy your services.",
+    tagline: "We don’t just bring traffic — we bring real leads ready to buy your services.",
     icon: Share2, 
     desc: "High quality leads that convert into bookings and grow your business.",
-    detailedContent: "We specialize in generating high-quality leads for travel agencies, Umrah services, Flights (including African Sector from UK), and tour operators. Using advanced funnel strategies, landing pages, and targeted ads, we bring customers who are ready to book. Our system ensures consistent lead flow, better conversions, and reduced cost per acquisition. We help you scale your business with predictable and reliable lead generation systems."
+    detailedContent: "We specialize in generating high-quality leads for travel agencies, Umrah services, Flights (including African Sector from UK), and tour operators. Using advanced funnel strategies, landing pages, and targeted ads, we bring customers who are ready to book. Our system ensures consistent lead flow, better conversions, and reduced cost per acquisition. We help you scale your business with predictable and reliable lead generation systems.",
+
+    points: [
+      "Qualified customer leads",
+      "Conversion-focused landing pages",
+      "Advanced targeting systems",
+      "Lower acquisition costs",
+    ]
   },
+
   { 
     id: "seo",
     title: "SEO Optimization", 
@@ -111,8 +135,16 @@ export const SERVICES_DATA = [
     image: "/seo-optimization.jpg",
     icon: Search, 
     desc: "Rank higher, get found by more travelers and increase organic traffic.",
-    detailedContent: "Our SEO services help your website rank higher on Google and attract organic traffic. We perform keyword research, on-page optimization, technical SEO, and backlink building. Our focus is on travel-related keywords that bring real customers. With long-term SEO strategies, we ensure your business gains visibility and authority in search engines."
+    detailedContent: "Our SEO services help your website rank higher on Google and attract organic traffic. We perform keyword research, on-page optimization, technical SEO, and backlink building. Our focus is on travel-related keywords that bring real customers. With long-term SEO strategies, we ensure your business gains visibility and authority in search engines.",
+
+    points: [
+      "Technical SEO improvements",
+      "Keyword ranking growth",
+      "Organic traffic increase",
+      "Authority backlink building",
+    ]
   },
+
   { 
     id: "ai",
     title: "AI & Automation", 
@@ -120,8 +152,16 @@ export const SERVICES_DATA = [
     image: "/ai-automation.jpg",
     icon: MessageSquare, 
     desc: "Smart automation that engages visitors, answers queries and boosts satisfaction.",
-    detailedContent: "Our AI chatbot solutions automate your customer support and lead handling process. We build intelligent chatbots that can answer queries, capture leads, and guide customers 24/7. Automation reduces workload, improves response time, and increases conversion rates for your business."
+    detailedContent: "Our AI chatbot solutions automate your customer support and lead handling process. We build intelligent chatbots that can answer queries, capture leads, and guide customers 24/7. Automation reduces workload, improves response time, and increases conversion rates for your business.",
+
+    points: [
+      "AI chatbot integration",
+      "24/7 automated support",
+      "Workflow automation systems",
+      "Instant lead responses",
+    ]
   },
+
   { 
     id: "crm",
     title: "CRM Development", 
@@ -129,17 +169,33 @@ export const SERVICES_DATA = [
     tagline: "Manage customers smarter with a CRM built around your workflow.",
     icon: Settings, 
     desc: "Custom CRM solutions to manage leads, bookings and relationships efficiently.",
-    detailedContent: "We develop custom CRM systems tailored to your business needs. Our CRM solutions help you manage leads, track customer interactions, and automate workflows. With a centralized system, you can improve efficiency, enhance customer relationships, and increase sales performance."
+    detailedContent: "We develop custom CRM systems tailored to your business needs. Our CRM solutions help you manage leads, track customer interactions, and automate workflows. With a centralized system, you can improve efficiency, enhance customer relationships, and increase sales performance.",
+
+    points: [
+      "Custom CRM dashboards",
+      "Lead tracking automation",
+      "Centralized customer data",
+      "Workflow management tools",
+    ]
   },
+
   { 
     id: "content",
     title: "Content Creation", 
-    tagline: " Powerful content that grabs attention and builds trust with your audience.",
+    tagline: "Powerful content that grabs attention and builds trust with your audience.",
     image: "/content-creation.jpg",
     icon: Layout, 
     desc: "Engaging content that informs, inspires and drives action across all platforms.",
-    detailedContent: "We create high-quality, engaging, and SEO-optimized content for your brand. From website content to blogs and marketing copy, our content is designed to attract, engage, and convert your audience. We focus on storytelling and value-driven content that builds trust and authority."
+    detailedContent: "We create high-quality, engaging, and SEO-optimized content for your brand. From website content to blogs and marketing copy, our content is designed to attract, engage, and convert your audience. We focus on storytelling and value-driven content that builds trust and authority.",
+
+    points: [
+      "SEO optimized writing",
+      "Brand storytelling content",
+      "Engaging blog articles",
+      "High-converting copywriting",
+    ]
   },
+
   { 
     id: "social",
     title: "Social Media Handling", 
@@ -147,7 +203,14 @@ export const SERVICES_DATA = [
     image: "/social-handling.jpg",
     icon: Palette, 
     desc: "Managing your social presence to build engagement and loyal communities.",
-    detailedContent: "We manage your social media presence professionally across platforms like Facebook, Instagram, and more. Our services include content posting, audience engagement, and ad management. We help you build a strong brand presence, increase followers, and generate leads through social media marketing."
+    detailedContent: "We manage your social media presence professionally across platforms like Facebook, Instagram, and more. Our services include content posting, audience engagement, and ad management. We help you build a strong brand presence, increase followers, and generate leads through social media marketing.",
+
+    points: [
+      "Creative social campaigns",
+      "Audience engagement growth",
+      "Daily content management",
+      "Platform branding strategy",
+    ]
   }
 ];
 
