@@ -36,7 +36,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-5 xl:gap-6">
+          <div className="hidden lg:flex items-center gap-7 xl:gap-7">
             {NAV_LINKS.map((link) => (
               <div
                 key={link.label}
@@ -86,8 +86,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-6">
-            <div className="flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-4">
+            <div className="flex items-center gap-4">
               <Link
                 href="https://instagram.com/etrendssolutions/"
                 className="text-[#0a1d4a] hover:text-[#00aef0] transition"
@@ -111,7 +111,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="px-6 xl:px-8 py-3 bg-[#00aef0] text-white rounded-full text-[12px] xl:text-[13px] font-bold uppercase tracking-widest hover:bg-[#0a1d4a] transition"
+              className="px-4 xl:px-5 py-3 bg-[#00aef0] text-white rounded-full text-[12px] xl:text-[13px] font-bold uppercase tracking-widest hover:bg-[#0a1d4a] transition"
             >
               Let's Talk
             </Link>
