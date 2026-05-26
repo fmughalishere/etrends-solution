@@ -77,7 +77,7 @@ export default function Footer() {
               <div className="flex items-center border-b border-white/20 pb-4 max-w-md group focus-within:border-[#00aef0] transition-colors">
                 <input
                   type="email"
-                  placeholder="Enter your professional email"
+                  placeholder="Enter your email"
                   className="bg-transparent flex-1 outline-none text-sm text-white placeholder:text-gray-400"
                 />
                 <button className="text-xs font-bold uppercase tracking-[2px] text-[#00aef0] hover:text-white transition-colors">

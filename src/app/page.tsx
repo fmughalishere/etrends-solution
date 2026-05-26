@@ -24,7 +24,7 @@ export default function Home() {
             icon={<Target className="w-8 h-8" />}
             title="Visionary Concepts"
             desc="Transforming forward-thinking ideas into powerful, practical applications that drive global success."
-            highlight={true} // Highlighted with Navy Blue
+            highlight={true}
           />
           <ValueCard
             icon={<Cpu className="w-8 h-8" />}
@@ -58,41 +58,46 @@ export default function Home() {
           <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <div className="w-12 h-[2px] bg-[#00aef0] mb-4" />
-              <h2 className="text-3xl md:text-5xl font-bold text-[#0a1d4a] uppercase tracking-tight">
-                Our Specialized <br /> Services
+              <h2 className="text-4xl md:text-6xl font-black text-[#0a1d4a] uppercase tracking-tighter">
+                Specialized <br /> Services
               </h2>
             </div>
             <Link
               href="/services"
               className="group flex items-center gap-3 text-[#0a1d4a] font-bold uppercase tracking-widest text-xs hover:text-[#00aef0] transition-colors"
             >
-              Explore All Services <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              Explore All Services{" "}
+              <ArrowRight
+                size={16}
+                className="transition-transform group-hover:translate-x-1"
+              />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 bg-gray-100 border border-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 bg-gray-200 border border-gray-200">
             {SERVICES_DATA.slice(0, 3).map((service) => (
               <Link
                 key={service.id}
                 href={`/services/${service.id}`}
-                className="group relative h-[300px] bg-white overflow-hidden flex flex-col justify-end p-10"
+                className="group relative h-[400px] md:h-[450px] bg-black overflow-hidden flex flex-col justify-end p-8 md:p-12"
               >
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#0a1d4a] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-[1]" />
+                <div className="absolute inset-0 bg-[#0a1d4a] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-[2]" />
 
-                <div className="relative z-10">
+                <div className="relative z-[3]">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-8 h-[1px] bg-[#0a1d4a] group-hover:bg-[#00aef0] transition-all" />
-                    <h3 className="text-lg font-bold text-[#0a1d4a] uppercase tracking-widest group-hover:text-white transition-colors">
+                    <div className="w-10 h-[2px] bg-[#00aef0] transition-all" />
+                    <h3 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter leading-none transition-colors">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-gray-500 text-sm opacity-0 group-hover:opacity-100 group-hover:text-gray-300 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                  <p className="text-gray-300 text-sm md:text-base opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 max-w-xs">
                     {service.desc}
                   </p>
                 </div>
@@ -121,7 +126,7 @@ export default function Home() {
             {[...PORTFOLIO_CLIENTS, ...PORTFOLIO_CLIENTS].map((client, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 text-2xl md:text-4xl font-bold uppercase tracking-widest text-gray-300 hover:text-[#0a1d4a] transition-all duration-300 cursor-default"
+                className="flex-shrink-0 text-2xl md:text-4xl font-black uppercase tracking-widest text-gray-300 hover:text-[#0a1d4a] transition-all duration-300 cursor-default"
               >
                 {client}
               </div>
@@ -129,6 +134,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
       <Testimonials />
     </main>
   );
@@ -138,18 +144,22 @@ function ValueCard({ icon, title, desc, highlight }: any) {
   return (
     <div
       className={`p-16 border border-gray-50 flex flex-col items-center text-center transition-all duration-700 ${
-        highlight 
-        ? "bg-[#0a1d4a] text-white shadow-2xl z-10" 
-        : "bg-white text-[#0a1d4a] hover:bg-gray-50"
+        highlight
+          ? "bg-[#0a1d4a] text-white shadow-2xl z-10"
+          : "bg-white text-[#0a1d4a] hover:bg-gray-50"
       }`}
     >
-      <div className={`mb-8 scale-125 ${highlight ? "text-[#00aef0]" : "text-[#00aef0]"}`}>
+      <div
+        className={`mb-8 scale-125 ${highlight ? "text-[#00aef0]" : "text-[#00aef0]"}`}
+      >
         {icon}
       </div>
       <h3 className="text-xl font-bold uppercase tracking-tighter mb-4">
         {title}
       </h3>
-      <p className={`text-sm leading-relaxed ${highlight ? "text-gray-300" : "text-gray-500"}`}>
+      <p
+        className={`text-sm leading-relaxed ${highlight ? "text-gray-300" : "text-gray-500"}`}
+      >
         {desc}
       </p>
     </div>

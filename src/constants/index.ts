@@ -41,7 +41,7 @@ export const PORTFOLIO_STATS = [
   { label: "Avg lead volume increase within 90 days", value: "3.8x" },
   { label: "Median CPL reduction vs existing accounts", value: "-$2.5" },
   { label: "Client retention rate at 12-month mark", value: "97%" },
-  { label: "Median time to first qualified lead", value: "14 Days" },
+  { label: "Median time to first qualified lead", value: "4 Days" },
 ];
 
 export const CASE_STUDIES = [
@@ -67,10 +67,10 @@ export const CASE_STUDIES = [
     image: "/2.jpg"
   },
   {
-    title: "94 qualified leads in 30 days, $15 CPL",
+    title: "94 qualified leads in 30 days, $2 CPL",
     category: "Immigration Marketing — Law Group",
-    description: "Deployed our immigration-specific Meta and Google funnel — pre-screened audiences, compliant ad copy, and a dedicated intake landing page. Average CPL held at $15 against a $70 industry benchmark.",
-    stats: "$15 CPL",
+    description: "Deployed our immigration-specific Meta and Google funnel — pre-screened audiences, compliant ad copy, and a dedicated intake landing page. Average CPL held at $2 against a $70 industry benchmark.",
+    stats: "$2 CPL",
     image: "/3.jpg"
   },
 ];
