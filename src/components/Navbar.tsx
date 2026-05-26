@@ -195,6 +195,12 @@ export default function Navbar() {
               >
                 <FaLinkedin size={20} />
               </Link>
+<Link
+                href="https://www.facebook.com/etrendssolutions/"
+                className="text-[#0a1d4a] hover:text-[#00aef0] transition"
+              >
+                <FaFacebook size={20} />
+              </Link>
             </div>
 
             <Link
