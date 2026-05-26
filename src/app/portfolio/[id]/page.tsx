@@ -20,17 +20,17 @@ export default function CaseStudyDetail() {
   if (!project) return notFound();
 
   return (
-    <main className="bg-[#0a0a0a] min-h-screen text-white">
-      <section className="relative h-[80vh] w-full flex items-end pb-20 overflow-hidden">
+    <main className="bg-white min-h-screen text-[#0a1d4a] overflow-x-hidden">
+      <section className="relative h-[75vh] w-full flex items-end pb-24 overflow-hidden bg-[#0a1d4a]">
         <div className="absolute inset-0 z-0">
           <Image
             src={project.image}
             alt={project.title}
             fill
-            className="object-cover opacity-40 grayscale"
+            className="object-cover opacity-40 transition-transform duration-[10s] hover:scale-110"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1d4a] via-transparent to-transparent" />
         </div>
 
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 w-full relative z-10">
@@ -41,86 +41,89 @@ export default function CaseStudyDetail() {
           >
             <Link
               href="/portfolio"
-              className="flex items-center gap-2 text-[#00aef0] text-[10px] font-bold uppercase tracking-[3px] mb-8 hover:gap-4 transition-all"
+              className="flex items-center gap-2 text-[#00aef0] text-[11px] font-bold uppercase tracking-[4px] mb-8 hover:gap-4 transition-all"
             >
-              <ArrowLeft size={14} /> Back to Portfolio
+              <ArrowLeft size={16} /> Back to Portfolio
             </Link>
-            <div className="mb-4">
+
+            <div className="mb-6">
               <svg width="60" height="15" viewBox="0 0 71 16" fill="none">
                 <path
                   d="M1 11L12.5 4L24 11L35.5 4L47 11L58.5 4L70 11"
                   stroke="#00aef0"
-                  strokeWidth="3"
+                  strokeWidth="4"
                 />
               </svg>
             </div>
-            <span className="text-[#00aef0] text-xs font-bold uppercase tracking-[4px] mb-4 block">
+
+            <span className="text-[#00aef0] text-xs font-bold uppercase tracking-[5px] mb-4 block">
               {project.category}
             </span>
-            <h1 className="text-4xl md:text-7xl lg:text-7xl font-bold tracking-tighter uppercase leading-none max-w-4xl">
+            <h1 className="text-4xl md:text-7xl font-bold tracking-tighter uppercase leading-none text-white max-w-5xl">
               {project.title}
             </h1>
           </motion.div>
         </div>
       </section>
-      <section className="py-24 border-y border-white/5 bg-[#0d0d0d]">
+      <section className="py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
             <div className="lg:col-span-4 space-y-12">
-              <div>
-                <h4 className="text-gray-500 text-[10px] font-bold uppercase tracking-[4px] mb-4">
-                  Key Result
+              <div className="p-12 bg-gray-50 rounded-[40px]">
+                <h4 className="text-gray-400 text-[11px] font-bold uppercase tracking-[4px] mb-6">
+                  Key Business Result
                 </h4>
-                <div className="text-5xl md:text-7xl font-black text-[#00aef0] tracking-tighter italic">
+                <div className="text-6xl md:text-8xl font-black text-[#0a1d4a] tracking-tighter italic">
                   {project.stats}
                 </div>
               </div>
 
-              <div className="pt-10 border-t border-white/5 space-y-6">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-500 uppercase text-[10px] font-bold tracking-widest">
-                    Client Sector
-                  </span>
-                  <span className="text-white text-sm font-bold">
-                    Travel & Tourism
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-500 uppercase text-[10px] font-bold tracking-widest">
-                    Service Type
-                  </span>
-                  <span className="text-white text-sm font-bold">
-                    {project.category.split("—")[0]}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-500 uppercase text-[10px] font-bold tracking-widest">
-                    Region
-                  </span>
-                  <span className="text-white text-sm font-bold">UK / USA</span>
-                </div>
+              <div className="pt-10 border-t border-gray-100 space-y-6">
+                {[
+                  { label: "Client Sector", value: "Travel & Tourism" },
+                  {
+                    label: "Service Type",
+                    value: project.category.split("—")[0],
+                  },
+                  { label: "Growth Region", value: "UK / USA" },
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="flex justify-between items-center border-b border-gray-50 pb-4"
+                  >
+                    <span className="text-gray-400 uppercase text-[10px] font-bold tracking-widest">
+                      {item.label}
+                    </span>
+                    <span className="text-[#0a1d4a] text-sm font-bold">
+                      {item.value}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
-
             <div className="lg:col-span-8">
-              <div className="w-12 h-[2px] bg-[#00aef0] mb-8" />
-              <h2 className="text-2xl md:text-4xl font-bold text-white uppercase tracking-tight mb-8">
-                Execution Strategy & <br /> Business Impact
+              <div className="w-16 h-[3px] bg-[#00aef0] mb-8" />
+              <h2 className="text-3xl md:text-5xl font-bold text-[#0a1d4a] uppercase tracking-tight mb-10 leading-tight">
+                Execution Strategy & <br />{" "}
+                <span className="text-[#00aef0]">Measurable Impact.</span>
               </h2>
-              <div className="prose prose-invert max-w-none">
-                <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              <div className="max-w-none">
+                <p className="text-gray-600 text-lg md:text-xl leading-relaxed mb-12">
                   {project.description}
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {[
-                    "Custom conversion-optimized landing pages",
-                    "Technical SEO & Content restructuring",
-                    "Data-driven audience targeting",
-                    "Automated lead nurturing systems",
+                    "Custom conversion funnels",
+                    "High-authority backlink systems",
+                    "Advanced audience pre-screening",
+                    "Intelligent intake automation",
                   ].map((point, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <CheckCircle2 className="text-[#00aef0] w-5 h-5 shrink-0" />
-                      <span className="text-gray-300 text-sm">{point}</span>
+                    <div key={idx} className="flex items-start gap-4">
+                      <CheckCircle2 className="text-[#00aef0] w-6 h-6 shrink-0" />
+                      <span className="text-[#0a1d4a] text-sm font-bold uppercase tracking-wide">
+                        {point}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -129,27 +132,28 @@ export default function CaseStudyDetail() {
           </div>
         </div>
       </section>
-      <section className="py-32 bg-black border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 text-center">
-          <div className="mb-6 flex justify-center">
+
+      <section className="py-32 bg-gray-50 border-t border-gray-100 text-center">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <div className="mb-8 flex justify-center">
             <svg width="60" height="15" viewBox="0 0 71 16" fill="none">
               <path
                 d="M1 11L12.5 4L24 11L35.5 4L47 11L58.5 4L70 11"
                 stroke="#00aef0"
-                strokeWidth="3"
+                strokeWidth="4"
               />
             </svg>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-10 tracking-tighter uppercase">
-            Looking for similar results?
+          <h2 className="text-4xl md:text-6xl font-bold text-[#0a1d4a] mb-12 tracking-tighter uppercase">
+            Achieve Your Growth Potential
           </h2>
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-4 px-12 py-5 border-2 border-[#00aef0] text-white font-bold uppercase text-xs tracking-[2px] overflow-hidden"
+            className="group relative inline-flex items-center gap-4 px-12 py-5 bg-[#0a1d4a] text-white font-bold uppercase text-[11px] tracking-[2px] rounded-full overflow-hidden transition-all shadow-xl shadow-[#0a1d4a]/20"
           >
-            <span className="relative z-10">Start Your Project</span>
-            <ArrowRight className="relative z-10 w-5 h-5 transition-transform group-hover:translate-x-2" />
-            <div className="absolute inset-0 bg-[#00aef0] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
+            <span className="relative z-10">Start Your Project Today</span>
+            <ArrowRight className="relative z-10 transition-transform group-hover:translate-x-2" />
+            <div className="absolute inset-0 bg-[#00aef0] translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
           </Link>
         </div>
       </section>

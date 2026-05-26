@@ -11,10 +11,10 @@ export const NAV_LINKS = [
     label: "Services", 
     href: "/services",
     dropdown: [
+      { label: "Web Design & Development", href: "/services/web" },
       { label: "Digital Marketing", href: "/services/marketing" },
       { label: "Lead Generation", href: "/services/leadgen" },
       { label: "SEO Optimization", href: "/services/seo" },
-      { label: "Web Design & Development", href: "/services/web" },
       { label: "AI & Automation", href: "/services/ai" },
       { label: "CRM Development", href: "/services/crm" },
       { label: "Content Creation", href: "/services/content" },
@@ -39,7 +39,7 @@ export const NAV_LINKS = [
 
 export const PORTFOLIO_STATS = [
   { label: "Avg lead volume increase within 90 days", value: "3.8x" },
-  { label: "Median CPL reduction vs existing accounts", value: "-52%" },
+  { label: "Median CPL reduction vs existing accounts", value: "-$2.5" },
   { label: "Client retention rate at 12-month mark", value: "97%" },
   { label: "Median time to first qualified lead", value: "14 Days" },
 ];
@@ -77,6 +77,14 @@ export const CASE_STUDIES = [
 
 export const SERVICES_DATA = [
   { 
+    id: "web",
+    title: "Website Design & Development", 
+    image: "/web-development.jpg",
+    icon: Globe, 
+    desc: "Modern, responsive and conversion focused websites that convert visitors into customers.",
+    detailedContent: "We design modern, fast, and mobile-friendly websites that convert visitors into customers. Our websites are optimized for speed, user experience, and SEO. Whether it's a travel booking site or a corporate website, we build solutions that reflect your brand identity and drive business growth."
+  },
+  { 
     id: "marketing",
     title: "Digital Marketing", 
     image: "/digital-marketing.jpg",
@@ -99,14 +107,6 @@ export const SERVICES_DATA = [
     icon: Search, 
     desc: "Rank higher, get found by more travelers and increase organic traffic.",
     detailedContent: "Our SEO services help your website rank higher on Google and attract organic traffic. We perform keyword research, on-page optimization, technical SEO, and backlink building. Our focus is on travel-related keywords that bring real customers. With long-term SEO strategies, we ensure your business gains visibility and authority in search engines."
-  },
-  { 
-    id: "web",
-    title: "Website Design & Development", 
-    image: "/web-development.jpg",
-    icon: Globe, 
-    desc: "Modern, responsive and conversion focused websites that convert visitors into customers.",
-    detailedContent: "We design modern, fast, and mobile-friendly websites that convert visitors into customers. Our websites are optimized for speed, user experience, and SEO. Whether it's a travel booking site or a corporate website, we build solutions that reflect your brand identity and drive business growth."
   },
   { 
     id: "ai",
@@ -198,7 +198,7 @@ export const BLOGS_DATA = [
     date: "May 20, 2024",
     category: "Technology",
     image: "/1.jpg",
-    author: "Hassan Ali",
+    author: "Ali Hassan",
     readTime: "5 min read"
   },
   {
