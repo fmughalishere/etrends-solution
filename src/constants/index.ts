@@ -80,6 +80,7 @@ export const SERVICES_DATA = [
   { 
     id: "web",
     title: "Website Design & Development", 
+    tagline: "Your business deserves a website that looks premium, loads fast, and turns visitors into customers.",
     image: "/web-development.jpg",
     icon: Globe, 
     desc: "Modern, responsive and conversion focused websites that convert visitors into customers.",
@@ -88,6 +89,7 @@ export const SERVICES_DATA = [
   { 
     id: "marketing",
     title: "Digital Marketing", 
+    tagline: "Reach the right audience, at the right time, with marketing that actually delivers results.",
     image: "/digital-marketing.jpg",
     icon: Megaphone, 
     desc: "Result-driven marketing strategies that build your brand and boost online presence.",
@@ -97,6 +99,7 @@ export const SERVICES_DATA = [
     id: "leadgen",
     title: "Lead Generation", 
     image: "/lead-generation.jpg",
+    tagline: " We don’t just bring traffic — we bring real leads ready to buy your services.",
     icon: Share2, 
     desc: "High quality leads that convert into bookings and grow your business.",
     detailedContent: "We specialize in generating high-quality leads for travel agencies, Umrah services, Flights (including African Sector from UK), and tour operators. Using advanced funnel strategies, landing pages, and targeted ads, we bring customers who are ready to book. Our system ensures consistent lead flow, better conversions, and reduced cost per acquisition. We help you scale your business with predictable and reliable lead generation systems."
@@ -104,6 +107,7 @@ export const SERVICES_DATA = [
   { 
     id: "seo",
     title: "SEO Optimization", 
+    tagline: "Be found where your customers are searching — on top of Google.",
     image: "/seo-optimization.jpg",
     icon: Search, 
     desc: "Rank higher, get found by more travelers and increase organic traffic.",
@@ -112,6 +116,7 @@ export const SERVICES_DATA = [
   { 
     id: "ai",
     title: "AI & Automation", 
+    tagline: "Save time, reduce manual work, and grow faster with smart automation.",
     image: "/ai-automation.jpg",
     icon: MessageSquare, 
     desc: "Smart automation that engages visitors, answers queries and boosts satisfaction.",
@@ -121,6 +126,7 @@ export const SERVICES_DATA = [
     id: "crm",
     title: "CRM Development", 
     image: "/crm-development.jpg",
+    tagline: "Manage customers smarter with a CRM built around your workflow.",
     icon: Settings, 
     desc: "Custom CRM solutions to manage leads, bookings and relationships efficiently.",
     detailedContent: "We develop custom CRM systems tailored to your business needs. Our CRM solutions help you manage leads, track customer interactions, and automate workflows. With a centralized system, you can improve efficiency, enhance customer relationships, and increase sales performance."
@@ -128,6 +134,7 @@ export const SERVICES_DATA = [
   { 
     id: "content",
     title: "Content Creation", 
+    tagline: " Powerful content that grabs attention and builds trust with your audience.",
     image: "/content-creation.jpg",
     icon: Layout, 
     desc: "Engaging content that informs, inspires and drives action across all platforms.",
@@ -136,6 +143,7 @@ export const SERVICES_DATA = [
   { 
     id: "social",
     title: "Social Media Handling", 
+    tagline: "Stay active, stay visible, and stay connected with your audience.",
     image: "/social-handling.jpg",
     icon: Palette, 
     desc: "Managing your social presence to build engagement and loyal communities.",

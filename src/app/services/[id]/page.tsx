@@ -66,17 +66,11 @@ export default function SingleServicePage() {
       </section>
       <section className="py-24 px-6 bg-white">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 items-center">
-          
-          {/* LEFT CONTENT */}
-          <div className="lg:col-span-7 order-2 lg:order-1">
+                    <div className="lg:col-span-7 order-2 lg:order-1">
             <div className="w-16 h-[3px] bg-[#00aef0] mb-8" />
 
-            {/* UPDATED HEADING */}
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0a1d4a] uppercase tracking-tight mb-8 leading-tight">
-              {service.title} <br />
-              <span className="text-[#00aef0]">
-                Solutions For Modern Brands.
-              </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0a1d4a] uppercase tracking-tight mb-8 leading-tight">
+               {service.tagline} <br />
             </h2>
 
             <p className="text-gray-600 text-lg md:text-xl leading-relaxed mb-10">
