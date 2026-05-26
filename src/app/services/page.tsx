@@ -3,7 +3,7 @@
 import { SERVICES_DATA, REVIEWS } from "../../constants";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Star, Quote, ChevronRight } from "lucide-react";
+import { ArrowRight, Star, Quote } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -17,7 +17,7 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <main className="bg-white min-h-screen text-[#0a1d4a]">
+    <main className="bg-white min-h-screen text-[#0a1d4a] overflow-x-hidden">
             <section className="relative h-[65vh] w-full flex items-center overflow-hidden bg-[#0a1d4a]">
         <div className="absolute inset-0 z-0">
           <Image
@@ -43,48 +43,47 @@ export default function ServicesPage() {
               <span className="text-white">Our Specialties</span>
             </nav>
             <h1 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-none text-white">
-              Our Services
+              Services
             </h1>
           </motion.div>
         </div>
       </section>
-
       <section className="py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="mb-16">
              <span className="text-[#00aef0] text-xs font-bold uppercase tracking-[5px] mb-4 block">What we do</span>
-             <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tight text-[#0a1d4a]">Expertise That Drives <br /> Global Growth</h2>
+             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#0a1d4a]">Expertise That Drives <br /> Global Growth</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 bg-gray-100 border border-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 bg-gray-200 border border-gray-200">
             {SERVICES_DATA.map((service) => (
               <Link
                 key={service.id}
                 href={`/services/${service.id}`}
-                className="group relative h-[350px] overflow-hidden flex flex-col justify-end p-10 bg-white"
-              >
-                <Image
+                className="group relative h-[400px] md:h-[450px] overflow-hidden flex flex-col justify-end p-8 md:p-12 bg-black"
+              >                <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover scale-100 group-hover:scale-110 transition-transform duration-700 opacity-80"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 
-                <div className="absolute inset-0 bg-[#0a1d4a] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-[1]" />
+                <div className="absolute inset-0 bg-[#0a1d4a] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-[2]" />
 
-                <div className="relative z-10">
+                <div className="relative z-[3]">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-8 h-[1px] bg-[#0a1d4a] group-hover:bg-[#00aef0] transition-all" />
-                    <h3 className="text-lg md:text-xl font-bold text-[#0a1d4a] uppercase tracking-widest group-hover:text-white transition-colors">
+                    <div className="w-10 h-[2px] bg-[#00aef0] transition-all" />
+                    <h3 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter leading-none transition-colors">
                       {service.title}
                     </h3>
                   </div>
 
-                  <p className="text-gray-600 text-sm opacity-0 group-hover:opacity-100 group-hover:text-gray-300 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                  <p className="text-gray-300 text-sm md:text-base opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 max-w-xs">
                     {service.desc}
                   </p>
 
-                  <div className="mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#0a1d4a] group-hover:text-[#00aef0] opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <div className="mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white group-hover:text-[#00aef0] opacity-0 group-hover:opacity-100 transition-all duration-500">
                     Learn More <ArrowRight size={14} />
                   </div>
                 </div>
