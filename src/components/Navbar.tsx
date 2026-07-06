@@ -48,7 +48,7 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="flex items-center gap-1 text-[#0a1d4a] text-[13px] xl:text-[14px] font-semibold uppercase tracking-widest hover:text-[#00aef0] transition"
+                  className="flex items-center gap-1 text-[#0a1d4a] text-[12px] xl:text-[12px] font-semibold uppercase tracking-widest hover:text-[#00aef0] transition"
                 >
                   {link.label}
 
@@ -92,26 +92,26 @@ export default function Navbar() {
                 href="https://instagram.com/etrendssolutions/"
                 className="text-[#0a1d4a] hover:text-[#00aef0] transition"
               >
-                <FaInstagram size={20} />
+                <FaInstagram size={17} />
               </Link>
 
               <Link
                 href="https://www.linkedin.com/company/109129070/"
                 className="text-[#0a1d4a] hover:text-[#00aef0] transition"
               >
-                <FaLinkedin size={20} />
+                <FaLinkedin size={17} />
               </Link>
               <Link
                 href="https://www.facebook.com/etrendssolutions/"
                 className="text-[#0a1d4a] hover:text-[#00aef0] transition"
               >
-                <FaFacebook size={20} />
+                <FaFacebook size={17} />
               </Link>
             </div>
 
             <Link
               href="/contact"
-              className="px-4 xl:px-5 py-3 bg-[#00aef0] text-white rounded-full text-[12px] xl:text-[13px] font-bold uppercase tracking-widest hover:bg-[#0a1d4a] transition"
+              className="px-3 xl:px-4 py-2 bg-[#00aef0] text-white rounded-full text-[11px] xl:text-[12px] font-bold uppercase tracking-widest hover:bg-[#0a1d4a] transition"
             >
               Let's Talk
             </Link>
@@ -206,7 +206,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center py-4 rounded-xl bg-[#00aef0] text-white font-bold uppercase tracking-widest hover:bg-[#0a1d4a] transition"
+              className="block w-50 mx-auto text-center py-3 rounded-xl bg-[#00aef0] text-white font-bold uppercase tracking-widest hover:bg-[#0a1d4a] transition"
             >
               Get Started
             </Link>
