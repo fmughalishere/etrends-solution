@@ -160,10 +160,10 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-y-0 right-0 w-24 md:w-40 z-10 bg-gradient-to-l from-[#f8fbff] to-transparent" />
                    <motion.div
             className="flex gap-16 md:gap-32 whitespace-nowrap w-max"
-            animate={{ x: ["0%", "-15%"] }}
+            animate={{ x: ["0%", "-10%"] }}
             transition={{
               repeat: Infinity,
-              duration: 25,
+              duration: 50,
               ease: "linear",
             }}
           >
