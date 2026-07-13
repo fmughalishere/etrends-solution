@@ -13,9 +13,12 @@ export default function BlogDetailPage() {
 
   if (!blog) return notFound();
 
+  const relatedBlogs = BLOGS_DATA.filter((b) => b.id !== blog.id).slice(0, 3);
+
   return (
     <main className="bg-white min-h-screen text-[#0a1d4a]">
-      <section className="relative h-[75vh] w-full flex items-center overflow-hidden bg-[#0a1d4a]">
+      {/* HERO */}
+      <section className="relative h-[80vh] w-full flex items-center overflow-hidden bg-[#0a1d4a]">
         <div className="absolute inset-0 z-0">
           <Image
             src={blog.image}
@@ -27,6 +30,15 @@ export default function BlogDetailPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1d4a] via-[#0a1d4a]/40 to-transparent" />
         </div>
 
+        <div
+          className="absolute inset-0 opacity-[0.06] z-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
+
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 w-full relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -34,33 +46,32 @@ export default function BlogDetailPage() {
           >
             <Link
               href="/blogs"
-              className="inline-flex items-center gap-2 text-[#00aef0] text-[11px] font-bold uppercase tracking-[4px] mb-10 hover:gap-4 transition-all"
+              className="inline-flex items-center gap-2 text-[#00aef0] text-[11px] font-bold tracking-[4px] mb-10 hover:gap-4 transition-all"
             >
               <ArrowLeft size={16} /> All Insights
             </Link>
-            <div className="mb-6">
-              <svg width="60" height="15" viewBox="0 0 71 16" fill="none">
-                <path
-                  d="M1 11L12.5 4L24 11L35.5 4L47 11L58.5 4L70 11"
-                  stroke="#00aef0"
-                  strokeWidth="4"
-                />
-              </svg>
-            </div>
-            <h1 className="text-4xl md:text-7xl lg:text-7xl font-bold tracking-tighter uppercase leading-[1.1] max-w-5xl text-white">
+            <br/>
+            {blog.category && (
+              <div className="inline-block bg-[#00aef0] px-4 py-1.5 text-[#0a1d4a] font-bold text-[10px] uppercase tracking-widest mb-6">
+                {blog.category}
+              </div>
+            )}
+
+            <h1 className="text-4xl md:text-7xl lg:text-7xl font-bold tracking-tighter leading-[1.1] max-w-5xl text-white">
               {blog.title}
             </h1>
           </motion.div>
         </div>
       </section>
 
+      {/* CONTENT */}
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24">
             <div className="lg:col-span-3">
               <div className="sticky top-32 space-y-12 border-l-4 border-[#00aef0] pl-10">
                 <div>
-                  <h4 className="text-[#0a1d4a]/40 text-[10px] font-bold uppercase tracking-[4px] mb-3">
+                  <h4 className="text-[#0a1d4a]/40 text-[10px] font-bold tracking-[4px] mb-3">
                     Published On
                   </h4>
                   <p className="text-lg font-bold flex items-center gap-3">
@@ -69,7 +80,7 @@ export default function BlogDetailPage() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-[#0a1d4a]/40 text-[10px] font-bold uppercase tracking-[4px] mb-3">
+                  <h4 className="text-[#0a1d4a]/40 text-[10px] font-bold tracking-[4px] mb-3">
                     Authored By
                   </h4>
                   <p className="text-lg font-bold flex items-center gap-3">
@@ -77,7 +88,7 @@ export default function BlogDetailPage() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-[#0a1d4a]/40 text-[10px] font-bold uppercase tracking-[4px] mb-3">
+                  <h4 className="text-[#0a1d4a]/40 text-[10px] font-bold tracking-[4px] mb-3">
                     Reading Time
                   </h4>
                   <p className="text-lg font-bold flex items-center gap-3">
@@ -98,9 +109,10 @@ export default function BlogDetailPage() {
                   <p>{blog.content}</p>
                 </div>
               </div>
+
               <div className="mt-20 pt-20 border-t border-gray-100">
                 <div className="mb-10">
-                  <h3 className="text-2xl font-bold uppercase tracking-tight">
+                  <h3 className="text-2xl font-bold tracking-tight">
                     Ready to implement these trends?
                   </h3>
                 </div>
@@ -119,6 +131,59 @@ export default function BlogDetailPage() {
           </div>
         </div>
       </section>
+
+      {/* RELATED POSTS */}
+      {relatedBlogs.length > 0 && (
+        <section className="py-24 px-6 md:px-12 bg-[#f8fbff]">
+          <div className="max-w-[1400px] mx-auto">
+            <span className="text-[#00aef0] text-xs font-bold uppercase tracking-[5px] mb-4 block">
+              Keep Reading
+            </span>
+            <h3 className="text-3xl md:text-4xl font-bold text-[#0a1d4a] tracking-tight mb-12">
+              More Insights
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {relatedBlogs.map((item) => (
+                <Link
+                  key={item.id}
+                  href={`/blogs/${item.id}`}
+                  className="group bg-white rounded-[30px] overflow-hidden border border-[#eef3fc] hover:shadow-2xl hover:shadow-[#0a1d4a]/5 transition-shadow duration-500"
+                >
+                  <div className="relative h-56 w-full overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    {item.category && (
+                      <div className="absolute top-5 left-5 bg-[#00aef0] px-3 py-1 text-[#0a1d4a] font-bold text-[10px] uppercase tracking-widest">
+                        {item.category}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="p-8">
+                    <span className="text-[10px] font-bold uppercase flex items-center gap-2 tracking-widest text-gray-400 mb-4">
+                      <Calendar size={12} className="text-[#00aef0]" />
+                      {item.date}
+                    </span>
+
+                    <h4 className="text-lg font-bold text-[#0a1d4a] leading-snug mb-4 group-hover:text-[#00aef0] transition-colors">
+                      {item.title}
+                    </h4>
+
+                    <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px] text-[#0a1d4a] group-hover:text-[#00aef0] transition-colors">
+                      Read More <ArrowRight size={14} />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </main>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, Clock, CheckCircle2 } from "lucide-react";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -37,6 +37,7 @@ export default function ContactPage() {
 
   return (
     <main className="bg-white min-h-screen text-[#0a1d4a] overflow-x-hidden">
+      {/* HERO */}
       <section className="relative h-[65vh] w-full flex items-center overflow-hidden bg-[#0a1d4a]">
         <div className="absolute inset-0 z-0">
           <Image
@@ -49,21 +50,21 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a1d4a] via-[#0a1d4a]/70 to-transparent" />
         </div>
 
+        <div
+          className="absolute inset-0 opacity-[0.06] z-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
+
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 w-full relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="mb-6">
-              <svg width="60" height="15" viewBox="0 0 71 16" fill="none">
-                <path
-                  d="M1 11L12.5 4L24 11L35.5 4L47 11L58.5 4L70 11"
-                  stroke="#00aef0"
-                  strokeWidth="4"
-                />
-              </svg>
-            </div>
             <nav className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[4px] text-[#00aef0] mb-4">
               <Link href="/" className="hover:text-white transition-colors">
                 Home
@@ -71,19 +72,26 @@ export default function ContactPage() {
               <span className="text-white/40">/</span>
               <span className="text-white">Get In Touch</span>
             </nav>
-            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-none text-white">
+            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-none text-white">
               Contact Us
             </h1>
+
+            <div className="flex items-center gap-3 mt-8 text-white/70 text-sm">
+              <Clock size={16} className="text-[#00aef0]" />
+              <span>We usually reply within 24 hours</span>
+            </div>
           </motion.div>
         </div>
       </section>
+
+      {/* MAIN */}
       <section className="py-24 px-6 md:px-12">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
             <div className="lg:col-span-5 space-y-12">
               <div>
                 <div className="w-16 h-[3px] bg-[#00aef0] mb-8" />
-                <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tight mb-8 text-[#0a1d4a]">
+                <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-8 text-[#0a1d4a]">
                   Interested in talking <br />{" "}
                   <span className="text-[#00aef0]">about your business?</span>
                 </h2>
@@ -131,8 +139,34 @@ export default function ContactPage() {
                   ))}
                 </div>
               </div>
+
+              <div className="bg-[#0a1d4a] rounded-3xl p-8 space-y-4">
+                {[
+                  "Free initial consultation",
+                  "Dedicated project manager",
+                  "Transparent pricing, no surprises",
+                ].map((point) => (
+                  <div key={point} className="flex items-center gap-3">
+                    <CheckCircle2 size={18} className="text-[#00aef0] shrink-0" />
+                    <span className="text-white/85 text-sm font-medium">
+                      {point}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
+
             <div className="lg:col-span-7 bg-gray-50 p-8 md:p-16 rounded-[40px] border border-gray-100 shadow-2xl shadow-[#0a1d4a]/5">
+              <div className="mb-10">
+                <h3 className="text-2xl font-bold text-[#0a1d4a]">
+                  Send us a message
+                </h3>
+                <p className="text-gray-500 text-sm mt-2">
+                  Fill in the details below and our team will get back to you
+                  shortly.
+                </p>
+              </div>
+
               <form onSubmit={handleSubmit} className="space-y-8 text-black">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <FormInput
@@ -226,6 +260,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
       <Link
         href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
         target="_blank"

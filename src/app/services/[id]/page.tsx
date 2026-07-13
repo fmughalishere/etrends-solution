@@ -1,7 +1,3 @@
-// ====================================
-// UPDATED SINGLE SERVICE PAGE FILE
-// ====================================
-
 "use client";
 
 import { useParams, notFound } from "next/navigation";
@@ -31,7 +27,14 @@ export default function SingleServicePage() {
 
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a1d4a] via-[#0a1d4a]/60 to-transparent" />
         </div>
-
+        <div
+          className="absolute inset-0 opacity-[0.06] z-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 w-full relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -40,23 +43,13 @@ export default function SingleServicePage() {
           >
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-[#00aef0] text-[10px] font-bold uppercase tracking-[3px] mb-8 hover:gap-4 transition-all"
+              className="inline-flex items-center gap-2 text-[#00aef0] text-[10px] font-bold  tracking-[3px] mb-8 hover:gap-4 transition-all"
             >
               <ArrowLeft size={14} />
               Back to Services
             </Link>
 
-            <div className="mb-4">
-              <svg width="60" height="15" viewBox="0 0 71 16" fill="none">
-                <path
-                  d="M1 11L12.5 4L24 11L35.5 4L47 11L58.5 4L70 11"
-                  stroke="#00aef0"
-                  strokeWidth="4"
-                />
-              </svg>
-            </div>
-
-            <nav className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[4px] text-white/60 mb-4">
+            <nav className="flex items-center gap-2 text-[11px] font-bold  tracking-[4px] text-white/60 mb-4">
               <Link href="/" className="hover:text-white transition-colors">
                 Home
               </Link>
@@ -66,7 +59,7 @@ export default function SingleServicePage() {
               <span className="text-[#00aef0]">{service.title}</span>
             </nav>
 
-            <h1 className="text-4xl md:text-7xl font-bold text-white tracking-tighter uppercase leading-tight max-w-5xl">
+            <h1 className="text-4xl md:text-7xl font-bold text-white tracking-tighter  leading-tight max-w-5xl">
               {service.title}
             </h1>
           </motion.div>
@@ -78,7 +71,7 @@ export default function SingleServicePage() {
           <div className="lg:col-span-7 order-2 lg:order-1">
             <div className="w-16 h-[3px] bg-[#00aef0] mb-8" />
 
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a1d4a] uppercase tracking-tight mb-8 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0a1d4a]  tracking-tight mb-8 leading-tight">
               {service.tagline}
             </h2>
 
@@ -91,7 +84,7 @@ export default function SingleServicePage() {
                 <div key={idx} className="flex items-center gap-3">
                   <CheckCircle2 className="text-[#00aef0] w-5 h-5 shrink-0" />
 
-                  <span className="text-[#0a1d4a] font-semibold text-sm uppercase tracking-wide">
+                  <span className="text-[#0a1d4a] font-semibold text-sm  tracking-wide">
                     {point}
                   </span>
                 </div>
@@ -100,7 +93,7 @@ export default function SingleServicePage() {
 
             <Link
               href="/contact"
-              className="group relative inline-flex items-center gap-4 px-12 py-5 bg-[#0a1d4a] text-white font-bold uppercase text-[11px] tracking-[2px] rounded-full overflow-hidden transition-all shadow-xl shadow-[#0a1d4a]/20"
+              className="group relative inline-flex items-center gap-4 px-12 py-5 bg-[#0a1d4a] text-white font-bold  text-[11px] tracking-[2px] rounded-full overflow-hidden transition-all shadow-xl shadow-[#0a1d4a]/20"
             >
               <span className="relative z-10">Start Your Project</span>
 
@@ -121,7 +114,13 @@ export default function SingleServicePage() {
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1d4a]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1d4a]/50 via-transparent to-transparent" />
+
+              <div className="absolute top-8 left-8 w-16 h-16 rounded-2xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center text-white shadow-lg">
+                <service.icon size={28} />
+              </div>
+
+              <div className="absolute inset-0 bg-[#0a1d4a]/10 opacity-0 group-hover:opacity-100 transition-opacity" />
             </motion.div>
           </div>
         </div>
@@ -133,7 +132,7 @@ export default function SingleServicePage() {
               97%
             </p>
 
-            <p className="text-[10px] font-bold uppercase tracking-[3px] text-[#00aef0] mt-2">
+            <p className="text-[10px] font-bold  tracking-[3px] text-[#00aef0] mt-2">
               Client Success
             </p>
           </div>
@@ -143,7 +142,7 @@ export default function SingleServicePage() {
               3.8x
             </p>
 
-            <p className="text-[10px] font-bold uppercase tracking-[3px] text-[#00aef0] mt-2">
+            <p className="text-[10px] font-bold  tracking-[3px] text-[#00aef0] mt-2">
               Lead Growth
             </p>
           </div>
@@ -153,7 +152,7 @@ export default function SingleServicePage() {
               24/7
             </p>
 
-            <p className="text-[10px] font-bold uppercase tracking-[3px] text-[#00aef0] mt-2">
+            <p className="text-[10px] font-bold  tracking-[3px] text-[#00aef0] mt-2">
               Smart Support
             </p>
           </div>
@@ -163,7 +162,7 @@ export default function SingleServicePage() {
               150+
             </p>
 
-            <p className="text-[10px] font-bold uppercase tracking-[3px] text-[#00aef0] mt-2">
+            <p className="text-[10px] font-bold  tracking-[3px] text-[#00aef0] mt-2">
               Global Projects
             </p>
           </div>
