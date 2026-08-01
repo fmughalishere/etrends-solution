@@ -34,6 +34,15 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+            <div className="mb-6">
+              <svg width="60" height="15" viewBox="0 0 71 16" fill="none">
+                <path
+                  d="M1 11L12.5 4L24 11L35.5 4L47 11L58.5 4L70 11"
+                  stroke="#00aef0"
+                  strokeWidth="4"
+                />
+              </svg>
+            </div>
             <p className="text-sm font-bold uppercase tracking-[4px] text-[#00aef0] mb-4">
               Work With Us
             </p>

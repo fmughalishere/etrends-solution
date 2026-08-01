@@ -35,7 +35,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl text-center lg:text-left"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#0a1d4a] leading-[1.1] mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0a1d4a] leading-[1.1] mb-6 tracking-tight">
               <span className="whitespace-nowrap">Shaping the Future</span>{" "}
               <span className="text-[#00aef0] whitespace-nowrap">
                 of Travel Industry.

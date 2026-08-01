@@ -36,7 +36,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-7 xl:gap-7">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-6">
             {NAV_LINKS.map((link) => (
               <div
                 key={link.label}
@@ -48,17 +48,19 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="flex items-center gap-1 text-[#0a1d4a] text-[12px] xl:text-[12px] font-semibold uppercase tracking-widest hover:text-[#00aef0] transition"
+                  className="group/nav relative flex items-center gap-1 text-[#0a1d4a] text-[10.5px] xl:text-[11px] font-semibold uppercase tracking-wider hover:text-[#00aef0] transition-colors duration-300 py-2"
                 >
                   {link.label}
 
                   {link.dropdown && (
                     <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-300 ${
+                      className={`w-3.5 h-3.5 transition-transform duration-300 ${
                         activeDropdown === link.label ? "rotate-180" : ""
                       }`}
                     />
                   )}
+
+                  <span className="absolute left-0 -bottom-0.5 h-[1.5px] w-0 bg-[#00aef0] transition-all duration-300 group-hover/nav:w-full" />
                 </Link>
 
                 {link.dropdown && (
@@ -111,9 +113,9 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="px-3 xl:px-4 py-2 bg-[#00aef0] text-white rounded-full text-[11px] xl:text-[12px] font-bold uppercase tracking-widest hover:bg-[#0a1d4a] transition"
+              className="px-3 xl:px-4 py-2 bg-[#00aef0] text-white rounded-full text-[10px] xl:text-[11px] font-bold uppercase tracking-wider hover:bg-[#0a1d4a] hover:scale-[1.04] transition-all duration-300"
             >
-              Let's Talk
+              Let&apos;s Talk
             </Link>
           </div>
 
