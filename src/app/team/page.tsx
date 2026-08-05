@@ -69,11 +69,8 @@ export default function TeamPage() {
       <section className="py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <span className="text-[#00aef0] text-xs font-bold uppercase tracking-[5px] mb-4 block">
-              The People
-            </span>
             <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter text-[#0a1d4a]">
-              Great People, Great Team
+              Meet the Talent
             </h2>
             <div className="w-16 h-[3px] bg-[#00aef0] mx-auto mt-6" />
           </div>
